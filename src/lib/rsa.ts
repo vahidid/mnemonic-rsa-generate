@@ -76,7 +76,7 @@ export class RSAKey {
 		});
 	}
 
-	async generate(B: number, E: string) {
+	async generate(B: number, E?: string): Promise<KeyType> {
 		const self = this;
 		return new Promise(async function (resolve, reject) {
 			try {
@@ -114,7 +114,7 @@ export class RSAKey {
 						valid = true;
 					}
 				}
-				var bigint_e = new BigInteger(null);
+				var bigint_e = new BigInteger(String(self.e), 10);
 				// bigint_e.fromInt(self.e);
 				var pr = pki.rsa.setPrivateKey(
 					self.n,
