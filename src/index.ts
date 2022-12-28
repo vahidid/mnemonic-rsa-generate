@@ -1,3 +1,1 @@
-export function sayHello() {
-	console.log("Hello");
-}
+export * from "./lib/rsa";
