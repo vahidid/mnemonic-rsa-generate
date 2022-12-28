@@ -5,7 +5,7 @@ import { pki } from "node-forge";
 describe("RSA", () => {
 	it("generate RSA keypair", (done) => {
 		const seed =
-			"midnight kiwi smooth convince web skate base future possible upgrade slim never";
+			"stadium tuna visit chunk ladder please volume ecology brave fabric camera resource";
 		const key = new RSAKey(seed);
 		key.generate(2048).then((generatedKey) => {
 			const pemPublic = pki
@@ -14,11 +14,9 @@ describe("RSA", () => {
 				.replace("-----END PUBLIC KEY-----", "")
 				.replace(/(\n|\r)/g, "");
 
-			console.log(pemPublic);
-
 			assert.equal(
 				pemPublic,
-				`MIIBITANBgkqhkiG9w0BAQEFAAOCAQ4AMIIBCQKCAQB4bmmQsvRZd0jecBB8z/CLKaz3kFbQQ5oav6HbiBwKMiW2tEp1kPSfRLs/FAT+g3xB+QBpsBE05U2045x8oaTCpVYL4S5pePKNdbhVJlducwVLfQlC3fttqCRRMYkem7Eo/c41rbYHXzYi8AVU8tMbOvBZbWCCefoL9PuRIhIyCngyXZbv5NlI+XFzR9+ndLaXCKJAW9bUrJGa2nlqvPHCBs3cZNpgK/AOwp8GRfxnV7NE3YJ5uAhAN129GSZQ9wTGfCvALuw6kB9QyoocHcuPHZIp/pSk0rP8bQVZlLdZTGLLKK6wXtX8bcyPLz7nmrzZebhHLCR6SW1cVtGlxzNvAgMGVTc=`
+				`MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoxe53/uyCz2ZGZMIiQ4ytr2sjnpHI9gmrdVzdNssZ5jtwYRJSsBg8EzEnI5k5DIKxtCaqGO04HbgAeyV5T/qoPz79OVQZP4kv2waOMi8BK237dg6lJ0Qs7idHNcalResXseJOEWgJv+fEI8nhHJqjiLa95m2KJyBP2Tjfp4l4RVdXYTzgOEf9C8SB6o/JXjcHTpBGlybwaBApHXJbWFtYslgxe+Ic0ZZhqIohq4RpS++tW0eToabnbbZIpgbHHiapzateayHJ15m6L6iOo5Ez5b5yI1vXc+dAOj9AjNHgl4Bbslj/Xqh+6X/As2vNVWKT0Vqy6aBmpLKZ5ODCVv0sQIDBlU3`
 			);
 			done();
 		});
