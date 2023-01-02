@@ -3,6 +3,7 @@
 	"version": "1.0.2",
 	"description": "Simple lib for generating RSA keys with mnemonic",
 	"main": "dist/mnemonic-rsa.js",
+	"types": "dist/src/index.d.ts",
 	"scripts": {
 		"test": "mocha -r ts-node/register src/tests/**/*.spec.ts --timeout 15000",
 		"build": "webpack"
