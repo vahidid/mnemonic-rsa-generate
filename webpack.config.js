@@ -10,7 +10,9 @@ const config = {
     output: {
         path: path.resolve(__dirname, "dist"),
         chunkFilename: '[name].js',
-        filename: '[name].js'
+        filename: '[name].js',
+        library: "mnemonic-rsa",
+        libraryTarget: "umd" 
     },
     devtool: 'source-map',
 

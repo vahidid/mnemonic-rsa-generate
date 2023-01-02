@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { RSAKey } from "../lib/rsa";
+import RSAKey from "../index";
 import { pki } from "node-forge";
 
 describe("RSA", () => {
