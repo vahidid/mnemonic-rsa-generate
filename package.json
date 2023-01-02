@@ -1,6 +1,6 @@
 {
 	"name": "mnemonic-rsa",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Simple lib for generating RSA keys with mnemonic",
 	"main": "dist/mnemonic-rsa.js",
 	"scripts": {
