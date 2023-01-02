@@ -1,1 +1,3 @@
-export * from "./lib/rsa";
+import { RSAKey } from "./lib/rsa";
+
+export default RSAKey;
